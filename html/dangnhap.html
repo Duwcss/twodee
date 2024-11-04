@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css_mDuc/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main_dn.css">
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <!-- mDuc--------------------------------------------------------------------------------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- tDuc--------------------------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/file.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/file.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>Layout</title>
+        <script>
+            $(document).ready(function(){
+                var i=2
+                // kiểm tra username
+                var txtUsername = $("#txtUsername")
+                var tbUsername = $("#tbUsername")
+                function kiemtraUsername(){
+                    var rg= /^(?=.*[A-Z])[^\s]{6,}$/
+                    if(txtUsername.val()==""){
+                        tbUsername.html("*Bắt Buộc Nhập")
+                        return false
+                    }
+                    if(!rg.test(txtUsername.val())){
+                        tbUsername.html("*Ít nhất 1 kí tự viết hoa, không khoảng cách, ít nhất 6 kí tự");
+                        return false;
+                    }
+                    tbUsername.html("*")
+                    return true
+                }
+                txtUsername.blur(kiemtraUsername)
+    
+                // kiểm tra Password
+                var txtPassword = $("#txtPassword")
+                var tbPassword = $("#tbPassword")
+                function kiemtraPassword(){
+                    var rg= /^.{6,}$/
+                    if(txtPassword.val()==""){
+                        tbPassword.html("*Bắt Buộc Nhập")
+                        return false
+                    }
+                    if(!rg.test(txtPassword.val())){
+                        tbPassword.html("*Mật khẩu ít nhất 6 ký tự");
+                        return false;
+                    }
+                    tbPassword.html("*")
+                    return true
+                }
+                txtPassword.blur(kiemtraPassword)
+    
+                // kiểm tra Email
+                
+                var txtEmail = $("#txtEmail");
+                var tbEmail = $("#tbEmail")
+                function KiemtraEmail(){
+                    var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,6}$/;
+                    if(txtEmail.val() == ""){
+                        tbEmail.html("* Bắt buộc nhập");
+                        return false;
+                    }
+                    if(!re.test(txtEmail.val())){
+                        tbEmail.html("* Nhập đúng định dạng!");
+                        return false;
+                    }
+                    tbEmail.html("*")
+                    return true;
+                }
+                txtEmail.blur(KiemtraEmail);
+                // kiểm tra Số Điện Thoại
+
+                var txtSdt = $("#txtSDT")
+                var tbSdt = $("#tbSDT")
+                function KiemtraSdt(){
+                    var re = /^(03|07|08|09){1}[0-9]{8}$/;
+                    if(txtSdt.val()==""){
+                        tbSdt.html("* Bắt buộc nhập");
+                        return false;
+                    }
+                    if(!re.test(txtSdt.val())){
+                        tbSdt.html("*Nhập theo định dạng:03xxx/07xxx/08xxx/09xxx !");
+                        return false;
+                    }
+                    tbSdt.html("*");
+                    return true;
+                }
+                txtSdt.blur(KiemtraSdt);
+    
+                // save
+                $("#btnSave").click(function(){
+                    if(!kiemtraUsername() || !kiemtraPassword() || !KiemtraEmail() || !KiemtraSdt()) {
+                        $("#thongbao").html("Bạn phải nhập đầy đủ thông tin")
+                        return false
+                    }
+                    var username = txtUsername.val()
+                    var password = txtPassword.val()
+                    var email = txtEmail.val()
+                    var sdt = txtSdt.val()
+                    var them = $("<tr><td>"+ (i++)+ "</td><td>"+ username+ "</td><td>"+ password+"</td><td>"+ email+ "</td><td>"+ sdt+ "</td></tr>")
+                    $("#thongbao").html("*")
+                    $("table .tbody").append(them)
+                })
+    
+    
+            })
+    
+        </script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar-collapse">
+                <div class="d-flex justify-content-between">
+                    <div class="">
+                        <div class="">
+                            <a class="navbar-brand" href="../html/Trangchu.html"><img style="width:200px ;display:block"
+                                    src="../img/43c25cda995b499db79509339764b16b.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div align="center" class="d-flex justify-content-center" style="flex-direction: column;">
+                        <ul class="nav navbar">
+                            <li class="menu0"><a href="../html/Trangchu.html">Trang chủ</a></li>
+                            <li class="menu0 nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Tất cả sản phẩm</a>
+                                <div class="dropdown-menu submenu">
+                                    <ul class="nav" style="border: 1px solid rgb(188, 182, 182);">
+                                        <li class="liall" style="width: 100%;padding:0;"><a class="dropdown-item"
+                                                href="../html/SanPham.html">Quần áo</a></li>
+                                        <li class="liall" style="width: 100%;padding:0;"><a class="dropdown-item"
+                                                href="./aGiay&Phukien.html">Giày và phụ kiện</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu0"><a href="../html/TinTuc.html">Tin Tức</a></li>
+                            <li class="menu0"><a href="../html/Lienhe.html">Liên hệ</a></li>
+                            <li class="menu0"><a href="../html/Chinhsach.html">Chính sách</a></li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0"
+                            style="position: relative;right :0 !important; left: unset; display: flex; justify-content: end;padding-right:60px;">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Nhập tên sản phẩm"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                            <a href="../html/dangnhap.html"><i class="fas fa-user"
+                                    style="position: relative;left:10px;"></i></a>
+                            <a href="./GioHang.html"><i class="fas fa-shopping-cart"
+                                    style="position: relative;left:25px;"></i></a>
+                        </form>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+        <!-- ------------------------------------------------------------------------------------- -->
+
+        <!-- Đăng nhập & Đăng kí -->
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6" style="background-image: linear-gradient(rgb(140, 140, 215),rgb(235, 139, 162));">
+                    <div class="main">
+                        <form action="" style="position: relative;left:0;color:rgb(183, 232, 184);">
+                            <h1 style="color:rgb(161, 215, 147);">Chào mừng trở lại</h1>
+                            <table>
+                                <tr>
+                                    <td ><label for="username">user name:</label></td>
+                                    <td class="td"><input  type="text" id="username"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="password" id="password">password:</label></td>
+                                    <td class="td"><input  type="password" id="password"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><a href="">Quên mật khẩu?</a></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding-left: 160px;">
+                                        <input class="submit" type="submit" value="Đăng nhập">                                        
+                                    </td>                                    
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6" style="position: relative;background-image: linear-gradient(rgb(242, 147, 172),rgb(140, 140, 215));">
+                    <div class="dk">
+                        <div class="dktr">
+                            <h2>Bạn là thành viên mới?</h2>
+                            <span>Đăng ký ngay!</span>
+                            <div>
+                                <button type="button" class="btn submit1" data-toggle="modal" data-target="#myModal">Đăng Kí</button>
+                            </div>  
+                            
+                        </div>
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2>Thông Tin Đăng Kí</h2>
+                                        <button type="button" class="close" data-dismiss="modal" style="padding-top: 20px;">&times;</button>
+                                    </div>
+                                    <div class="modal-body" style="height: 500px;">
+                                        <form action="" class="form-hozizontal" role="form" style="position: relative;left:0;">
+                                            <div class="form-group">
+                                                <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="txtUsername" class="control-label col-sm-12">Userame</label>
+                                                <div class="col-sm-12">
+                                                    <input type="text" id="txtUsername" placeholder="Nhập Userame" class="form-control">
+                                                    <span id="tbUsername" class="text-danger">*</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <label for="txtPassword" class="control-label">Password</label>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <input type="password" id="txtPassword" placeholder="Nhập Password" class="form-control">
+                                                    <span id="tbPassword" class="text-danger">*</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <label for="txtEmail" class="control-label">Email</label>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <input type="text" id="txtEmail" placeholder="Nhập Email" class="form-control">
+                                                    <span id="tbEmail" class="text-danger">*</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <label for="txtSDT" class="control-label">Số Điện Thoại</label>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <input type="text" id="txtSDT" placeholder="Nhập Số Điện Thoại" class="form-control">
+                                                    <span id="tbSDT" class="text-danger">*</span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer" >
+                                        <button type="button" class="btn" data-dismiss="modal">Thoát</button>
+                                        <button type="button" class="btn btn-info" data-dismiss="modal" id="btnSave">Đăng Kí</button>
+                                    </div>
+                                </div>
+                
+                            </div>
+                
+                        </div>
+                        <div class="row" style=" width: 670px;position: relative;left:-7px;">
+                            <div class="col-sm-12">
+                                <h2 style="text-align: center;">Danh Sách Đăng Kí</h2>
+                            </div>
+                            <div class="col-sm-12">
+                                <table class="table table-bordered">
+                                    <thead style="background-color: rgb(99, 76, 201);">
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Username</th>
+                                            <th>Password</th>
+                                            <th>Email</th>
+                                            <th>Số Điện Thoại</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>tranminhduc</td>
+                                            <td>123456</td>
+                                            <td>tranminhduc.iuh@gmail.com</td>
+                                            <td>0372625677</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+    <!-- ------------------------------------------------------------------------------------- -->
+        <footer>
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <a href="../html/Trangchu.html"><img id="logof" src="../img/43c25cda995b499db79509339764b16b__2_-removebg-preview.png" alt=""></a>
+                    <p>TwoDee luôn cam kết, đảm bảo đưa sản phẩm trực tiếp từ nhà sản xuất đến tay người dùng và kiểm soát được chất lượng để đáp ứng được nhu cầu ngày càng cao của khách hàng. Tất cả các sản phẩm tại TwoDee đều có nguồn gốc xuất xứ rõ ràng, chất lượng.</p>
+                </div>
+                <div class="col-md-6" align="center">
+                    <h3>Về chúng tôi</h3>
+                    <div style="float: left;width:50%;">
+                        <img src="" alt="" style="width:150px;height:110px;border-radius: 50px;">
+                        <p style="padding-left: 30px;">Trần Minh Đức</p>
+                    </div>
+                    <div style="float: left;width:50%;">
+                        <img src="../img/10.JPG" alt="" style="width:150px;height:110px;border-radius: 50px;">
+                        <p style="padding-left: 35px;">Nguyễn Trung Đức</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Liên hệ</h3>
+                    <p>Luôn cập nhật tất cả các hành động mà chúng tôi đã lưu cho tất cả khách hàng của mình.</p>
+                    <div class="logo-lienhe">
+                        <a href="https://www.facebook.com/"><img src="https://file.hstatic.net/200000588277/file/facebook__6__53aaa8d352524d3eb025af5203eaa437_icon.png" alt=""></a>
+                        <a href="https://www.youtube.com/"><img src="https://file.hstatic.net/200000588277/file/youtube__5__4f04522e10494557a651f53a33ad4d76_icon.png" alt=""></a>
+                        <a href="https://www.pinterest.com/"><img src="https://file.hstatic.net/200000588277/file/pinterest_a1a15995132a4275845412deba5f1193_icon.png" alt=""></a>
+                        <a href="https://www.tiktok.com/"><img src="https://file.hstatic.net/200000588277/file/tik-tok_d85bb4e7468c43ac9ed5437649b7405c_icon.png" alt=""></a>
+                        <a href="https://www.instagram.com/"><img src="https://file.hstatic.net/200000588277/file/instagram__3__7de3ebbce1f24003b516ca6c1d7c24d5_icon.png" alt=""></a>
+                     </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

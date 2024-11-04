@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/file.css">
+    <script type="text/javascript" src="../../../js/file.js"></script>
+    <script type="text/javascript" src="../../../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <style>
+        input[type="number"] {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function decreaseQuantity() {
+            var quantityInput = document.getElementById("quantity");
+            var currentValue = parseInt(quantityInput.value, 10);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        }
+
+        function increaseQuantity() {
+            var quantityInput = document.getElementById("quantity");
+            var currentValue = parseInt(quantityInput.value, 10);
+            quantityInput.value = currentValue + 1;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar-collapse">
+                <div class="d-flex justify-content-between">
+                    <div class="">
+                        <div class="">
+                            <a class="navbar-brand" href="../../Trangchu.html"><img style="width:200px ;display:block"
+                                    src="../../../img/43c25cda995b499db79509339764b16b.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div align="center" class="d-flex justify-content-center" style="flex-direction: column;">
+                        <ul class="nav navbar">
+                            <li class="menu0"><a href="../../Trangchu.html">Trang chủ</a></li>
+                            <li class="menu0 nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Tất cả sản phẩm</a>
+                                <div class="dropdown-menu submenu">
+                                    <ul class="nav" style="border: 1px solid rgb(188, 182, 182);">
+                                        <li class="liall" style="width: 100%;padding:0;"><a class="dropdown-item"
+                                                href="../../SanPham.html">Quần áo</a></li>
+                                        <li class="liall" style="width: 100%;padding:0;"><a class="dropdown-item"
+                                                href="../../aGiay&Phukien.html">Giày và phụ kiện</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu0"><a href="../../TinTuc.html">Tin Tức</a></li>
+                            <li class="menu0"><a href="../..//Lienhe.html">Liên hệ</a></li>
+                            <li class="menu0"><a href="../../Chinhsach.html">Chính sách</a></li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0"
+                            style="position: relative;right :0 !important; left: unset; display: flex; justify-content: end;padding-right:60px;">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Nhập tên sản phẩm"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                            <a href="../../dangnhap.html"><i class="fas fa-user"
+                                    style="position: relative;left:10px;"></i></a>
+                            <a href="../../GioHang.html"><i class="fas fa-shopping-cart"
+                                    style="position: relative;left:25px;"></i></a>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="col-md-2">
+            <div id="menu-nav"
+                style="margin-top: 10px;width:250px;border:1px solid rgb(193, 186, 186);border-radius: 10px;">
+                <div>
+                    <h3 style="padding-top: 10px;width:250px;" id="menu-nav-h3" align="center">Danh mục sản phẩm</h3>
+                </div>
+                <nav class="navbar-collapse" style="margin-left:1px;padding: 0;width:248px;">
+                    <ul class="nav" align="center">
+                        <li class="menu"><a href="../../../html/aSoSinh.html">Quần áo sơ sinh</a></li>
+                        <li class="menu"><a href="../../../html/aBeGai.html">Thời trang bé gái</a></li>
+                        <li class="menu"><a href="../../aBeTrai.html">Thời trang bé trai</a></li>
+                        <li class="menu"><a href="../../aGiay&Phukien.html">Giày và phụ kiện</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row" style="padding-left:50px;margin-top:10px; align-items: center;">
+            <div class="col-5">
+                <img id="img-product" src="../../../Data_TwoDee/Images/PK_002.jpg"
+                    style="width: 350px;" alt="">
+            </div>
+            <div class="col-7">
+                <h3 id="productName">Baby Pacifiers</h3>
+                <del>599,000<sup>đ</sup></del>
+                <span class="text-danger" id="productPrice" style="font-size: 20px;">450,000<sup>đ</sup></span>
+                <span style="border-radius: 10px;background-color: red;color:white;">Tiết kiệm 24%</span><br> <br>
+                <div>
+                    <span class="fas fa-star" style="color: yellow;"></span>
+                    <span class="fas fa-star" style="color: yellow;"></span>
+                    <span class="fas fa-star" style="color: yellow;"></span>
+                    <span class="fas fa-star" style="color: yellow;"></span>
+                    <span class="fas fa-star" style="color: yellow;"></span>
+                </div>
+                <div>
+                    <h3 id="">Kích thước</h3>
+                    <form id="myForm" style="position: relative;left:0%;top:10px;">
+                        <input class="productSize" type="radio" name="productSize" value="2month"> 2month
+                        <input class="productSize" type="radio" name="productSize" value="4month"> 4month    
+                        <input class="productSize" type="radio" name="productSize" value="6month"> 6month
+                        <input class="productSize" type="radio" name="productSize" value="12month"> 12month
+                    </form>
+                </div>
+                <div>
+                    <div>
+                        <label for="quantity" style="margin-right: 20px;">
+                            <h3 id="productQuantity">Số lượng</h3>
+                        </label>
+                        <button type="button" value="-" onclick="decreaseQuantity()">-</button>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        <button type="button" value="+" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <div>
+                        <label for="Voucher">
+                            <h3>Voucher ưu đãi</h3>
+                        </label>
+                        <img src="../../../img/click.webp" alt="" style="width: 30px;"><br><br>
+                        <ul class="nav">
+                            <li><img src="../../../img/shop_coupon_item_image_1.png" alt=""></li>
+                            <li style="margin-left: 20px;"><img src="../../../img/shop_coupon_item_image_2.png"
+                                    alt=""></li>
+                            <li style="margin-left: 20px;"><img src="../../../img/shop_coupon_item_image_3.png"
+                                    alt=""></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button class="btn-danger" style="margin-top: 20px;width:300px;height:50px;"onclick="saveProduct()">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-7">
+                <h3 style="border: 1px solid rgb(146, 140, 140);border-radius: 10px 10px 0 0 ;background-color: rgb(235, 122, 122);color:white;margin-bottom: -2.5px;"
+                    align="center">Mô tả sản phẩm</h3>
+                <p style="border: 1px solid rgb(199, 184, 184);border-top: white;">Những đôi Booties dành cho bé gái Barbie không chỉ là sản phẩm chăm sóc đáng yêu mà còn là điểm nhấn thời trang cho đôi chân nhỏ xinh. <br> Chất liệu vải mềm mại và thoáng khí giúp bảo vệ làn da nhạy cảm của bé, đồng thời giữ ấm cho đôi chân bé yêu. <br> Thiết kế đáng yêu với hình ảnh Barbie tinh tế và màu sắc tươi sáng làm tăng thêm sự hấp dẫn cho bé.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <h3 style="border: 1px solid rgb(146, 140, 140);border-radius: 10px 10px 0 0 ;background-color: rgb(235, 122, 122);color:white;margin-bottom: -2.5px;"
+                    align="center">Thông số kỹ thuật</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="tdnho">Thương hiệu</td>
+                                <td>TwoDee</td>
+                            </tr>
+                            <tr>
+                                <td class="tdnho">Xuất xứ</td>
+                                <td>Việt Nam</td>
+                            </tr>
+                            <tr>
+                                <td class="tdnho">Chất liệu</td>
+                                <td>95% polyester 5% spandex</td>
+                            </tr>
+                            <tr>
+                                <td class="tdnho">Độ tuổi phù hợp</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <a href="../../../html/Trangchu.html"><img id="logof"
+                            src="../../../img/43c25cda995b499db79509339764b16b__2_-removebg-preview.png" alt=""></a>
+                    <p>TwoDee luôn cam kết, đảm bảo đưa sản phẩm trực tiếp từ nhà sản xuất đến tay người dùng và kiểm
+                        soát được chất lượng để đáp ứng được nhu cầu ngày càng cao của khách hàng. Tất cả các sản phẩm
+                        tại TwoDee đều có nguồn gốc xuất xứ rõ ràng, chất lượng.</p>
+                </div>
+                <div class="col-md-6" align="center">
+                    <h3>Về chúng tôi</h3>
+                    <div style="float: left;width:50%;">
+                        <img src="" alt="" style="width:150px;height:110px;border-radius: 50px;">
+                        <p style="padding-left: 30px;">Trần Minh Đức</p>
+                    </div>
+                    <div style="float: left;width:50%;">
+                        <img src="../../../img/10.JPG" alt="" style="width:150px;height:110px;border-radius: 50px;">
+                        <p style="padding-left: 35px;">Nguyễn Trung Đức</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Liên hệ</h3>
+                    <p>Luôn cập nhật tất cả các hành động mà chúng tôi đã lưu cho tất cả khách hàng của mình.</p>
+                    <div class="logo-lienhe">
+                        <a href="https://www.facebook.com/"><img
+                                src="https://file.hstatic.net/200000588277/file/facebook__6__53aaa8d352524d3eb025af5203eaa437_icon.png"
+                                alt=""></a>
+                        <a href="https://www.youtube.com/"><img
+                                src="https://file.hstatic.net/200000588277/file/youtube__5__4f04522e10494557a651f53a33ad4d76_icon.png"
+                                alt=""></a>
+                        <a href="https://www.pinterest.com/"><img
+                                src="https://file.hstatic.net/200000588277/file/pinterest_a1a15995132a4275845412deba5f1193_icon.png"
+                                alt=""></a>
+                        <a href="https://www.tiktok.com/"><img
+                                src="https://file.hstatic.net/200000588277/file/tik-tok_d85bb4e7468c43ac9ed5437649b7405c_icon.png"
+                                alt=""></a>
+                        <a href="https://www.instagram.com/"><img
+                                src="https://file.hstatic.net/200000588277/file/instagram__3__7de3ebbce1f24003b516ca6c1d7c24d5_icon.png"
+                                alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/SanPham.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/file.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar-collapse">
+                <div class="d-flex justify-content-between">
+                    <div class="">
+                        <div class="">
+                            <a class="navbar-brand" href="../html/Trangchu.html"><img style="width:200px ;display:block"
+                                    src="../img/43c25cda995b499db79509339764b16b.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div align="center" class="d-flex justify-content-center" style="flex-direction: column;">
+                        <ul class="nav navbar">
+                            <li class="menu0"><a href="../html/Trangchu.html">Trang chủ</a></li>
+                            <li class="menu0 nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Tất cả sản phẩm</a>
+                                <div class="dropdown-menu submenu">
+                                    <ul class="nav" style="border: 1px solid rgb(188, 182, 182);">
+                                        <li class="liall" style="width: 100%;padding:0;"><a class="dropdown-item"
+                                                href="../html/SanPham.html">Quần áo</a></li>
+                                        <li class="liall" style="width: 100%;padding:0;"><a class="dropdown-item"
+                                                href="./aGiay&Phukien.html">Giày và phụ kiện</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu0"><a href="../html/TinTuc.html">Tin Tức</a></li>
+                            <li class="menu0"><a href="../html/Lienhe.html">Liên hệ</a></li>
+                            <li class="menu0"><a href="../html/Chinhsach.html">Chính sách</a></li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0"
+                            style="position: relative;right :0 !important; left: unset; display: flex; justify-content: end;padding-right:60px;">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Nhập tên sản phẩm"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                            <a href="../html/dangnhap.html"><i class="fas fa-user"
+                                    style="position: relative;left:10px;"></i></a>
+                            <a href="./GioHang.html"><i class="fas fa-shopping-cart"
+                                    style="position: relative;left:25px;"></i></a>
+                        </form>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+        <section>
+            <div class="col-md-2">
+                <div id="menu-nav" style="margin-top: 10px;width:250px;border:1px solid rgb(193, 186, 186);border-radius: 10px;">
+                    <div>
+                        <h3 style="padding-top: 10px;width:250px;" id="menu-nav-h3" align="center">Danh mục sản phẩm</h3>
+                    </div>
+                    <nav class="navbar-collapse" style="margin-left:1px;padding: 0;width:248px;">
+                        <ul class="nav" align="center">
+                            <li class="menu"><a href="../html/aSoSinh.html">Quần áo sơ sinh</a></li>
+                            <li class="menu"><a href="../html/aBeGai.html">Thời trang bé gái</a></li>
+                            <li class="menu"><a href="../html/aBeTrai.html">Thời trang bé trai</a></li>
+                            <li class="menu"><a href="./aGiay&Phukien.html">Giày và phụ kiện</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="key">
+                    <h2 align="center">Từ khóa nổi bật</h2>
+                    <nav class="navbar-collapse">
+                        <ul class="nav">
+                            <li><a href="#">#Tất cả</a></li>
+                            <li><a href="#">#Xu hướng</a></li>
+                            <li><a href="#">#Đồ bộ</a></li>
+                            <li><a href="#">#Váy tay bồng</a></li>
+                            <li><a href="#">#TwoDee</a></li>
+                            <li><a href="#">#Mua là tặng</a></li>
+                            <li><a href="#">#Nội Địa</a></li>
+                            <li><a href="#">#Chất lượng cao</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="thumbnail" align="center">
+                    <div id="thumbnail1" style="position:absolute;bottom:130px;left:40px;color:rgb(250, 251, 248);font-size: 16px;font-weight: bold;">
+                        <p>Sale 50% Tất cả</p>
+                        <span>Mua online giảm thêm 10%</span>
+                        <p>Code: TwoDee</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div id="head-sp">
+                    <h3 align="center" style="margin-top: 70px;">Quần áo</h3>
+                </div>
+                <div class="col-md-12" style="margin-top:60px;">
+                    <div class="col-md-3">
+                        <div class="sanpham">
+                            <a href="../html/ChiTietSanPham/Sosinh/Sp1.html"> <img src="../img/hinh anh so sinh/body-dui-sat-nach-mau-xanh-haki-1.webp" alt="" style="width: 227px;border-radius:20px 20px 0 0;"></a>
+                            <a href="../html/ChiTietSanPham/Sosinh/Sp1.html"><h3 style="font-size: 18px;">Body suit màu xanh</h3></a>
+                            <span class="text-danger" style="font-size: 18px;">129,000<sup>đ</sup></span>
+                            <del>199,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sanpham">
+                            <a href="./ChiTietSanPham/Sosinh/Sp2.html"><img src="../img/hinh anh so sinh/body-dui-ke-sat-nach-tui-op-haki-mau-ke-cam-day-1.webp" alt="" style="width: 227px;border-radius:20px 20px 0 0;"></a>
+                            <a href="./ChiTietSanPham/Sosinh/Sp2.html"> <h3 style="font-size: 18px;">Body suit màu cam</h3></a>
+                            <span class="text-danger" style="font-size: 18px;">129,000<sup>đ</sup></span>
+                            <del>199,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sanpham">
+                            <a href="./ChiTietSanPham/Sosinh/Sp3.html"><img src="../img/hinh anh so sinh/do-bo-tay-ngan-hoa-tiet-cay-thong-iq-baby-mau-trang-1.webp" alt="" style="width: 227px;border-radius:20px 20px 0 0;"></a>
+                            <a href="./ChiTietSanPham/Sosinh/Sp3.html"><h3 style="font-size: 18px;">Bộ tay ngắn họa tiết cây thông</h3></a>
+                            <span class="text-danger" style="font-size: 18px;">69,000<sup>đ</sup></span>
+                            <del>99,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sanpham">
+                            <a href="./ChiTietSanPham/Sosinh/SP4.html"><img src="../img/hinh anh so sinh/bo-tay-dai-cai-giua-lullaby-nh122v-mau-tim-0.webp" alt="" style="width: 227px;border-radius:20px 20px 0 0;"></a>
+                            <a href="./ChiTietSanPham/Sosinh/SP4.html"><h3 style="font-size: 18px;">Bộ tay dài cài giữa màu tím</h3></a>
+                            <span class="text-danger" style="font-size: 18px;">148,000<sup>đ</sup></span>
+                            <del>199,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 10px;">
+                        <div class="sanpham">
+                            <img src="../img/hinh anh so sinh/bo-so-sinh-sat-nach-mau-in-babymommy-mau-ngau-nhien-1-min.webp" alt="" style="width: 227px;border-radius:20px 20px 0 0;">
+                            <h3 style="font-size: 18px;">Bộ sát nách in thú</h3>
+                            <span class="text-danger" style="font-size: 18px;">47,000<sup>đ</sup></span>
+                            <del>99,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 10px;">
+                        <div class="sanpham">
+                            <img src="../img/hinh anh so sinh/bo-tay-dai-cai-lech-babymommy-mau-ngau-nhien-1-1.webp" alt="" style="width: 227px;border-radius:20px 20px 0 0;">
+                            <h3 style="font-size: 18px;">Bộ tay dài cài lệch</h3>
+                            <span class="text-danger" style="font-size: 18px;">108,000<sup>đ</sup></span>
+                            <del>199,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 10px;">
+                        <div class="sanpham">
+                            <img src="../img/hinh anh so sinh/combo-bodysuit-lullaby-nh112v-trang-hong-1-1.webp" alt="" style="width: 227px;border-radius:20px 20px 0 0;">
+                            <h3 style="font-size: 18px;">Combo 2 body suit</h3>
+                            <span class="text-danger" style="font-size: 18px;">166,000<sup>đ</sup></span>
+                            <del>249,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 10px;">
+                        <div class="sanpham">
+                            <img src="../img/hinh anh so sinh/set-bo-tay-dai-cai-giua-babymommy-mau-nau-1.webp" alt="" style="width: 227px;border-radius:20px 20px 0 0;">
+                            <h3 style="font-size: 18px;">Set bộ tay dài cài giữa</h3>
+                            <span class="text-danger" style="font-size: 18px;">173,000<sup>đ</sup></span>
+                            <del>299,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 10px;">
+                        <div class="sanpham">
+                            <img src="../img/hinh anh so sinh/set-bo-tay-dai-cai-cheo-babymommy-mau-trang-xanh-1-1.webp" alt="" style="width: 227px;height:255px;border-radius:20px 20px 0 0;">
+                            <h3 style="font-size: 18px;">Set bộ tay dài cài chéo</h3>
+                            <span class="text-danger" style="font-size: 18px;">152,000<sup>đ</sup></span>
+                            <del>199,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 10px;">
+                        <div class="sanpham">
+                            <img src="../img/hinh anh so sinh/3-02-pb__-_body_dai_tat_co_thuy_thu_ke_xanh_phoi_trang_theu_xu_mat_gau_3b605fee589b4181937328bf0f664d1b_master.jpg" alt="" style="width: 227px;border-radius:20px 20px 0 0;">
+                            <h3 style="font-size: 18px;">Body dài tất cổ</h3>
+                            <span class="text-danger" style="font-size: 18px;">265,000<sup>đ</sup></span>
+                            <del>299,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 10px;">
+                        <div class="sanpham">
+                            <img src="../img/hinh anh so sinh/bo_lien_dai_co_tat_mau_trang_in_hoa_tiet_phoi_mau_xanh_17dca546aac942988b46f2219a6a59fe_master.jpg" alt="" style="width: 227px;border-radius:20px 20px 0 0;">
+                            <h3 style="font-size: 18px;">Bộ liền dài có tất</h3>
+                            <span class="text-danger" style="font-size: 18px;">205,000<sup>đ</sup></span>
+                            <del>249,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 10px;">
+                        <div class="sanpham">
+                            <img src="../img/hinh anh so sinh/upload_13c03ea6db724ae384a22eb49c35d497_master.jpg" alt="" style="width: 227px;border-radius:20px 20px 0 0;">
+                            <h3 style="font-size: 18px;">Body cộc hồng phối trắng</h3>
+                            <span class="text-danger" style="font-size: 18px;">225,000<sup>đ</sup></span>
+                            <del>299,000<sup>đ</sup></del>
+                        </div>
+                    </div>
+                </div>
+                <div id="chuyentrang" >
+                    <div class="chuyen"><a href="../html/SanPham.html" aria-label="Trang truoc"><</a></div>
+                    <div class="chuyen" id="chuyen1"><a href="../html/SanPham.html">1</a></div>
+                    <div class="chuyen"><a href="../html/SanPham2.html">2</a></div>
+                    <div class="chuyen"><a href="../html/SanPham3.html">3</a></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <a href="../html/Trangchu.html"><img id="logof" src="../img/43c25cda995b499db79509339764b16b__2_-removebg-preview.png" alt=""></a>
+                    <p>TwoDee luôn cam kết, đảm bảo đưa sản phẩm trực tiếp từ nhà sản xuất đến tay người dùng và kiểm soát được chất lượng để đáp ứng được nhu cầu ngày càng cao của khách hàng. Tất cả các sản phẩm tại TwoDee đều có nguồn gốc xuất xứ rõ ràng, chất lượng.</p>
+                </div>
+                <div class="col-md-6" align="center">
+                    <h3>Về chúng tôi</h3>
+                    <div style="float: left;width:50%;">
+                        <img src="" alt="" style="width:150px;height:110px;border-radius: 50px;">
+                        <p style="padding-left: 30px;">Trần Minh Đức</p>
+                    </div>
+                    <div style="float: left;width:50%;">
+                        <img src="../img/10.JPG" alt="" style="width:150px;height:110px;border-radius: 50px;">
+                        <p style="padding-left: 35px;">Nguyễn Trung Đức</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Liên hệ</h3>
+                    <p>Luôn cập nhật tất cả các hành động mà chúng tôi đã lưu cho tất cả khách hàng của mình.</p>
+                    <div class="logo-lienhe">
+                        <a href="https://www.facebook.com/"><img src="https://file.hstatic.net/200000588277/file/facebook__6__53aaa8d352524d3eb025af5203eaa437_icon.png" alt=""></a>
+                        <a href="https://www.youtube.com/"><img src="https://file.hstatic.net/200000588277/file/youtube__5__4f04522e10494557a651f53a33ad4d76_icon.png" alt=""></a>
+                        <a href="https://www.pinterest.com/"><img src="https://file.hstatic.net/200000588277/file/pinterest_a1a15995132a4275845412deba5f1193_icon.png" alt=""></a>
+                        <a href="https://www.tiktok.com/"><img src="https://file.hstatic.net/200000588277/file/tik-tok_d85bb4e7468c43ac9ed5437649b7405c_icon.png" alt=""></a>
+                        <a href="https://www.instagram.com/"><img src="https://file.hstatic.net/200000588277/file/instagram__3__7de3ebbce1f24003b516ca6c1d7c24d5_icon.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
